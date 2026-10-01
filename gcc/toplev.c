@@ -591,6 +591,9 @@ int flag_fixed_debug_line_info = 0;
 /* Fix prologue bug in new compiler.  */
 int flag_prologue_bugfix = 0;
 
+/* Output standard-compliant dwarf .debug_abbrev section.  */
+int flag_dwarf_bugfix = 0;
+
 typedef struct
 {
     char *string;
@@ -739,6 +742,8 @@ lang_independent_options f_options[] =
     {"prologue-bugfix", &flag_prologue_bugfix, 1,
      "Prevent unnecessary saving of the lr register to the stack"},
 #endif
+    {"dwarf-bugfix", &flag_dwarf_bugfix, 1,
+     "Output standard-compliant dwarf .debug_abbrev section"},
 };
 
 #define NUM_ELEM(a)  (sizeof (a) / sizeof ((a)[0]))
